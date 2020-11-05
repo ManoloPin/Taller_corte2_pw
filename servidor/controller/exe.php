@@ -30,3 +30,19 @@ function httpGet2($currencie2){
     return $output2;
     //echo $output;
 }
+
+function httpGet3(){
+    // $url="https://api.bittrex.com/v3/currencies/".$currencie; 
+    $url="https://api.bittrex.com/v3/markets/tickers"; 
+    $ch = curl_init();  
+ 
+    curl_setopt($ch,CURLOPT_URL,$url);
+    curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
+//  curl_setopt($ch,CURLOPT_HEADER, false); 
+ 
+    $output3=curl_exec($ch);
+ 
+    curl_close($ch);
+    return $output3;
+    //echo $output;
+}

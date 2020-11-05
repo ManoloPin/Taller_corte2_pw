@@ -9,7 +9,11 @@ if(isset($_GET['req'])){
 	$resp2=httpGet2($_GET['req2']);
 	echo $resp2;
 }
-
+else
+	if(isset($_GET['req3'])){
+	$resp3=httpGet3($_GET['req3']);
+	echo $resp3;
+}
  
 
 
