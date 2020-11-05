@@ -385,14 +385,65 @@
   </form>
   <br>
   <br>
+  <div id="resp"></div>
   <form>
-    <label for="idL">*Cédula:</label><br><input type="text" id="idL" value="" required pattern="[0-9]"><br>
-    <button type="button" id="cargar">Buscar</button>
-    <button type="button" id="eliminar">Eliminar</button> 
+    <label for="id">*Por favor seleccione la cripto-moneda que desea comparar con USD:</label><br><select id="currencie2">
+      <option>SELECCIONE...</option>
+      <option>ADABEAR</option>
+      <option>ADABULL</option>
+      <option>ADA</option>
+      <option>ALGO</option>
+      <option>ATOM</option>
+      <option>BAT</option>
+      <option>BCH</option>
+      <option>BEAR</option>
+      <option>BSV</option>
+      <option>BTC</option>
+      <option>BULL</option>
+      <option>CELO</option>
+      <option>COMP</option>
+      <option>CRO</option>
+      <option>DAI</option>
+      <option>DASH</option>
+      <option>DCR</option>
+      <option>DGB</option>
+      <option>DOGE</option>
+      <option>DOT</option>
+      <option>ENJ</option>
+      <option>EOS</option>
+      <option>ETC</option>
+      <option>ETHBEAR</option>
+      <option>ETHBULL</option>
+      <option>ETH</option>
+      <option>FIL</option>
+      <option>HBAR</option>
+      <option>HIVE</option>
+      <option>KMD</option>
+      <option>LINK</option>
+      <option>LTC</option>
+      <option>PAX</option>
+      <option>RVN</option>
+      <option>SC</option>
+      <option>SOLVE</option>
+      <option>TRX</option>
+      <option>TUSD</option>
+      <option>UNI</option>
+      <option>USDC</option>
+      <option>USDS</option>
+      <option>USDT</option>
+      <option>WAXP</option>
+      <option>XLM</option>
+      <option>XRP</option>
+      <option>XTZ</option>
+      <option>ZEC</option>
+      <option>ZEN</option>
+      <option>ZRX</option>
+    </select>
+    <button type="button" onclick="loadDoc2()">comparar</button>
   </form>
   <br>
   <br>
-  <div id="resp"></div>
+  <div id="resp2"></div>
   <!-- <script type="text/javascript" src="controller/fetch.js"></script> -->
   <script src="http://localhost/Taller_corte2_pw/cliente/controller/ajax.js"></script>
 </body>
