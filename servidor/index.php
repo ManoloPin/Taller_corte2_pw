@@ -16,7 +16,7 @@ else
 }
 else
 	if(isset($_GET['req4'])){
-	$resp4=httpGet3($_GET['req4']);
+	$resp4=httpGet4($_GET['req4']);
 	echo $resp4;
 }
  

@@ -101,6 +101,6 @@ function httpGet4(){
         print( $cadena2."<br />") ;
     }
     $res = json_encode($array2h);
-    return $output4;
+    //return $output4;
     //echo $output;
 }
