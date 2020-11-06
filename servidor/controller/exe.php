@@ -51,7 +51,6 @@ function httpGet2($currencie2){
       return $cadena;
     }
 
-
     return $output2;
     //echo $output;
 }
@@ -77,6 +76,31 @@ function httpGet3(){
         print( $cadena."<br />") ;
     }
     $res = json_encode($array2);
-    return $output3;
+    //return $output3;
+    //echo $output;
+}
+
+function httpGet4(){
+    // $url="https://api.bittrex.com/v3/currencies/".$currencie; 
+    $url="https://api.bittrex.com/v3/markets/"; 
+    $ch = curl_init();  
+ 
+    curl_setopt($ch,CURLOPT_URL,$url);
+    curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
+//  curl_setopt($ch,CURLOPT_HEADER, false); 
+ 
+    $output4=curl_exec($ch);
+ 
+    curl_close($ch);
+
+    $arrayh = json_decode($output4, true);
+    
+    foreach($arrayh as $value){
+        $cadena2 = $value['createdAt'];
+        $array2h = array($cadena2);
+        print( $cadena2."<br />") ;
+    }
+    $res = json_encode($array2h);
+    return $output4;
     //echo $output;
 }
