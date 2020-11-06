@@ -9,9 +9,22 @@ function httpGet($currencie){
 //  curl_setopt($ch,CURLOPT_HEADER, false); 
  
     $output=curl_exec($ch);
- 
+
     curl_close($ch);
-    return $output;
+ 
+    $res = "[".$output."]";
+    $resul = json_decode($res, true);
+    //$res = json_encode($cadena);
+
+    foreach($resul as $value){
+        $cadena = $value['logoUrl'] ;  
+        $img =  "<img src='".$cadena."' width='100' height='100'  >";
+      //  print( $cadena."<br />") ;
+
+      return $img;
+    }
+    
+    
     //echo $output;
 }
 
@@ -27,6 +40,18 @@ function httpGet2($currencie2){
     $output2=curl_exec($ch);
  
     curl_close($ch);
+
+    $res = "[".$output2."]";
+    $array = json_decode($res, true);
+    //$res = json_encode($cadena);
+
+    foreach($array as $value){
+        $cadena = "Valor actual = ".$value['bidRate'] ;  
+      //  print( $cadena."<br />") ;
+      return $cadena;
+    }
+
+
     return $output2;
     //echo $output;
 }
@@ -43,6 +68,15 @@ function httpGet3(){
     $output3=curl_exec($ch);
  
     curl_close($ch);
+
+    $array = json_decode($output3, true);
+    
+    foreach($array as $value){
+        $cadena = $value['symbol'];
+        $array2 = array($cadena);
+        print( $cadena."<br />") ;
+    }
+    $res = json_encode($array2);
     return $output3;
     //echo $output;
 }
